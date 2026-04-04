@@ -1,0 +1,47 @@
+.error_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 60rem;
+  width: 80%;
+  margin: auto;
+  font-family: "DM Sans", Sans-serif;
+}
+.error_container h1 {
+  font-size: 4rem;
+  color: #519488;
+  text-align: center;
+  align-self: center;
+}
+.error_container div {
+  color: #052633;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.error_container ol li {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.error_container p {
+  font-size: 1.2rem;
+}
+.error_container button {
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  background-color: #052633;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.error_container button a {
+  text-decoration: none;
+  color: #fff;
+}
+.error_container button:hover {
+  background-color: #fff;
+}
+.error_container button:hover a{
+  color: #052633;
+}

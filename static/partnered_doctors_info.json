@@ -1,0 +1,15 @@
+{
+  "Delhi": [
+    {
+      "clinicName": "Goodness Hospital",
+      "doctorName": "Dr. Dhruv Sharma",
+      "doctorDegree": "B.D.S.",
+      "doctorExperience": "5+ years",
+      "clinicGoogleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.5407606549993!2d76.88702771108247!3d28.7033811255245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0b4db4d9535f%3A0x63c1c1fc2e8d20df!2sGoodness%20Hospital!5e0!3m2!1sen!2sin!4v1707585258209!5m2!1sen!2sin"
+    }
+  ],
+  "Mumbai": [
+  ],
+  "Bangalore": [
+  ]
+}

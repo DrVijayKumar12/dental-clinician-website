@@ -1,0 +1,29 @@
+.community-heading {
+    text-align: center;
+    margin-top: 3rem;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.community-under-development {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem auto 8rem;
+    height: 40vh;
+    width: 60%;
+    color: #55C2C3;
+    font-family: 'Poppins', sans-serif;
+  }
+  .community-under-development img{
+    height: 20rem;
+    width: fit-content;
+    padding: 0 1rem 3rem;
+    filter: contrast(1.1);
+  }
+  .community-under-development .under-development-heading {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 2rem;
+      align-items: center;
+  }

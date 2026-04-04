@@ -1,0 +1,538 @@
+.profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4% 5%;
+  height: 50rem;
+  box-shadow: 1px 7px 18px rgb(0 0 0 / 20%);
+  font-family: "Nunito Sans", sans-serif;
+}
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  height: 48rem;
+  width: 20%;
+  padding: 1rem;
+}
+.profile-menu-header {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.profile-menu-header img {
+  height: 4.8rem;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 0.2rem solid #ffc44d;
+  margin: 0.6rem 0.6rem 0.6rem 0;
+}
+
+.profile-menu-header-idName {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+}
+.profile-menu-header-idName #uniqueID {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* PROFILE MENU ITEMS */
+.profile-menu-items img {
+  height: 1.6rem;
+  margin: 0 0.4rem;
+  border-radius: 50%;
+}
+.profile-menu-items div {
+  margin-left: 5px;
+  color: #fff;
+}
+
+.study-tracker-menu,
+.update-account-menu,
+.logout-account-menu,
+.delete-account-menu {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem;
+  border: 0.2rem solid white;
+  padding: 0.8rem;
+  border-radius: 30px;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+.study-tracker-menu:hover,
+.update-account-menu:hover,
+.logout-account-menu:hover,
+.delete-account-menu:hover {
+  border-color: #ffc44d;
+}
+
+.profile-menu-items a {
+  text-decoration: none;
+  color: #fff;
+}
+.study-tracker-menu:hover div,
+.update-account-menu:hover div,
+.logout-account-menu:hover div,
+.delete-account-menu:hover div {
+  color: #ffc44d;
+}
+
+/* UPDATE ACCOUNT PAGE */
+.update-account-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 42rem;
+  width: 70%;
+  padding: 5%;
+}
+.update-account-content #edit-icon {
+  height: 4.2rem;
+  align-self: flex-end;
+}
+
+.update-account-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+.update-account-inputs #username-input {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-width: 0 0 0.1rem 0;
+  margin-bottom: 1.6rem;
+  width: 60%;
+}
+.update-account-inputs #username-input:focus {
+  border-width: 0 0 0.1rem 0;
+  outline: none;
+}
+.update-account-inputs div {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.update-account-inputs label {
+  margin-bottom: 0.8rem;
+}
+.update-account-inputs #enter-password {
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 50%;
+  border-width: 0 0 0.1rem 0;
+  margin-bottom: 1.6rem;
+}
+.update-account-inputs #enter-password:focus {
+  border-width: 0 0 0.1rem 0;
+  outline: none;
+}
+
+.update-account-content .avatar-wrapper img {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 3.6rem !important;
+  height: 3.6rem !important;
+  transition: ease 0.2s;
+  padding: 0.6rem;
+  border: 0.2rem solid white;
+  margin: 0.4rem;
+}
+.update-account-content .avatar-wrapper {
+  height: 11rem;
+  margin: 0;
+}
+.update-account-content .avatar-wrapper img:hover {
+  border: 0.2rem solid lightgray;
+}
+.update-account-content .avatar-wrapper img.selected {
+  width: 4rem !important;
+  height: 4rem !important;
+  padding: 0.8rem;
+}
+.update-account-content .avatar-option.selected {
+  border: 0.2rem solid #00de68;
+}
+
+.update-account-inputs .update-and-cancel-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.update-account-inputs #update-btn {
+  background: rgb(0, 255, 106);
+  color: #fff;
+  padding: 0.8rem;
+  width: 8rem;
+  margin: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: scale(1);
+  border: none;
+  transition: transform 0.3s ease-out;
+}
+.update-account-inputs #update-btn:hover {
+  color: #12ad2b;
+  border: 0.1rem solid #12ad2b;
+  background: white;
+  cursor: pointer;
+  transform: scale(1.03, 1);
+  transition: transform 0.3s ease-out;
+}
+.update-account-inputs .update-account-cancel a {
+  text-decoration: none;
+  color: crimson;
+}
+.update-account-inputs .update-account-cancel {
+  background: white;
+  padding: 0.8rem;
+  margin: 0.8rem;
+  width: 8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: scale(1);
+  border: 0.1rem solid crimson;
+  transition: transform 0.3s ease-out;
+}
+.update-account-inputs .update-account-cancel a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.update-account-inputs .update-account-cancel:hover {
+  color: #fff;
+  border: 0.1rem solid #fff;
+  background: crimson;
+  cursor: pointer;
+  transform: scale(1.03, 1);
+  transition: transform 0.3s ease-out;
+}
+
+/* Main my-profile Page WHITE BACKGROUND*/
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 42rem;
+  width: 80%;
+}
+
+.profile-details #profile-photo {
+  height: 8rem;
+  padding: 0.8rem;
+  border: 0.3rem solid lightsalmon;
+  border-radius: 50%;
+  width: 8rem;
+  margin: 1.6rem 0 0.8rem 0;
+}
+.profile-details #profile-username {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.profile-details #profile-email-id {
+  margin-top: 2.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.profile-details #profile-uniqueID {
+  margin-top: 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8rem;
+}
+
+/* LOG OUT PAGE */
+.logout-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 70%;
+  padding: 5%;
+}
+
+.logout-content img {
+  align-self: flex-start;
+  margin-bottom: 1.6rem;
+  height: 3.2rem;
+}
+.logout-content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 24rem;
+  width: 48rem;
+  margin-bottom: 6.4rem;
+  box-shadow: 0.1rem 0.4rem 1.2rem rgb(0 0 0 / 20%);
+}
+.logout-content-card h3 {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+}
+.logout-btn-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+/* LOGOUT BUTTON */
+
+.profile-page #logout-btn {
+  height: 3.2rem;
+  width: 10rem;
+  color: white;
+  border: none;
+  background-color: lightsalmon;
+  border: 0.1rem solid lightsalmon;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+  cursor: pointer;
+}
+.profile-page #logout-btn:hover {
+  color: lightsalmon;
+  background-color: #fff;
+}
+
+.logout-btn-cancel {
+  text-decoration: none;
+  height: 3.2rem;
+  width: 10rem;
+  border: 0.1rem solid navy;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logout-btn-cancel a {
+  text-decoration: none;
+  color: navy;
+}
+.logout-btn-cancel:hover {
+  border: none;
+  background-color: lightgrey;
+}
+.logout-btn-cancel a:hover {
+  color: #fff;
+}
+/* DELETE ACCOUNT */
+
+.delete-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 70%;
+  padding: 5%;
+}
+.delete-account img {
+  align-self: flex-start;
+  margin-bottom: 0.8rem;
+  height: 3.2rem;
+}
+.delete-account-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 24rem;
+  width: 56rem;
+  margin-bottom: 6rem;
+  box-shadow: 0.1rem 7px 18px rgb(0 0 0 / 20%);
+}
+.delete-account-card h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  padding: 1.6rem;
+}
+.delete-account-card #warning {
+  align-self: center;
+  padding: 0 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* DELETE BUTTON OPTIONS */
+.delete-btn-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.delete-account #delete-btn {
+  height: 3.2rem;
+  width: 10rem;
+  color: #fff;
+  border: none;
+  background-color: crimson;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profile-page #delete-btn:hover {
+  color: crimson;
+  border: 0.1rem solid crimson;
+  background-color: #fff;
+}
+
+.delete-btn-cancel {
+  text-decoration: none;
+  height: 3.2rem;
+  width: 10rem;
+  border: 0.1rem solid navy;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.delete-btn-cancel a {
+  text-decoration: none;
+  color: navy;
+}
+.delete-btn-cancel:hover {
+  border: none;
+  background-color: lightgrey;
+}
+.delete-btn-cancel a:hover {
+  color: #fff;
+}
+
+/* PROFILE TRACKER */
+.profile-study-tracker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 70%;
+  padding: 5%;
+}
+.profile-study-tracker img {
+  height: 20rem;
+  filter: contrast(1.1);
+}
+
+/* TOAST MESSAGES SECTION */
+
+.profile-update-failed {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6.4rem;
+  left: 53%;
+  transform: translateX(-50%);
+  background-color: #f80e0eaf;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  opacity: 0;
+  animation-name: toast-animation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes toast-animation {
+  0% {
+    opacity: 0;
+    top: -4rem;
+  }
+  10% {
+    opacity: 1;
+    top: 4rem;
+  }
+  90% {
+    opacity: 1;
+    top: 4rem;
+  }
+  100% {
+    opacity: 0;
+    top: -4rem;
+  }
+}
+.profile-update-failed div {
+  margin: 0.8rem;
+}
+.profile-update-failed img {
+  height: 1.6rem;
+}
+.profile-update-success {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.2rem;
+  left: 53%;
+  transform: translateX(-50%);
+  background-color: #12ad2ccc;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  opacity: 0;
+  animation-name: toast-animation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes toast-animation {
+  0% {
+    opacity: 0;
+    top: -4rem;
+  }
+  10% {
+    opacity: 1;
+    top: 4rem;
+  }
+  90% {
+    opacity: 1;
+    top: 4rem;
+  }
+  100% {
+    opacity: 0;
+    top: -4rem;
+  }
+}
+.profile-update-success div {
+  margin: 0.8rem 4rem 0.8rem 0.8rem;
+}
+.profile-update-success img {
+  height: 1.6rem;
+  margin-left: 4rem;
+}
+
+/* CSS FOR RESPONSIVE DESIGN */
+@media only screen and (max-width: 767px) {
+  .profile-menu {
+    width: 50%;
+  }
+  .logout-content-card {
+    width: 20rem;
+  }
+  .delete-account-card {
+    height: 34rem;
+    width: 20rem;
+  }
+  .update-account-content .avatar-wrapper {
+    height: 18rem;
+  }
+  .update-account-content .avatar-wrapper img:hover {
+    border: 0.2rem solid #00de68;
+  }
+}

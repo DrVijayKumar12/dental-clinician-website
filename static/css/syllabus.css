@@ -1,0 +1,76 @@
+.years {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+.years h1 {
+  text-align: center;
+}
+.years h2 {
+  padding: 2rem;
+  border-radius: 5px;
+}
+.years h2:first-of-type  {
+  background: #e6ffe3;
+}
+.years h2:nth-of-type(2) {
+  background: #EDF4F7;
+}
+.years h2:nth-of-type(3) {
+  background: #ffecec;
+}
+.years h2:nth-of-type(4) {
+  background: #fffeb77a;
+}
+
+.first-year-subjects,.second-year-subjects, .third-year-subjects, .final-year-subjects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 0px;
+}
+.final-year-subjects {
+  background: #e6ffe3;
+}
+.third-year-subjects {
+  background: #EDF4F7;
+}
+.second-year-subjects {
+  background: #ffecec;
+}
+.first-year-subjects {
+  background: #fffeb77a;
+}
+
+.subject-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  height: 26rem;
+  width: 16rem;
+  border-radius: 4px;
+  background-color: white;
+  transition: transform 0.3s ease-out;
+  transform: scale(1);
+  border-bottom: 0.2rem solid transparent;
+}
+
+.subject-image-container img {
+  width: 100%;
+}
+.subject-image-container h3 {
+  align-self: flex-start;
+  margin: 0.4rem 0 0.8rem 0.6rem;
+}
+.subject-image-container:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out;
+  color: crimson;
+  border-bottom: .2rem solid crimson;
+}

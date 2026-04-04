@@ -1,0 +1,113 @@
+
+.chapters-list_heading{
+  display: flex;
+  align-items: center;
+  margin: 1rem 5%;
+}
+.chapters-list_heading img{
+  height: 2rem;
+}
+.chapters-list_heading button{
+  border: none;
+  background: none;
+  padding: 0;
+}
+.chapters-list_heading button a{
+  display: flex;
+  align-items: center;
+}
+.chapters-list_heading a{
+  text-decoration: none;
+  color: #55c2c3;
+}
+
+.chapters-list_heading h1 {
+  margin-inline: 4%;
+}
+
+.unitName div {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1.2rem 5%;
+}
+.chapters-list {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 3rem 8rem;
+  justify-content: center;
+  border-radius: 5px;
+}
+.chapters-list div {
+  margin: 0.4rem 0;
+  padding: 1.6rem;
+  border: 1px solid rgb(44, 44, 112);
+  box-shadow: 1px 5px 20px rgb(0 0 0 / 7%);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transform: scale(1); /* reset to original size */
+  transition: transform 0.3s ease-out;
+}
+.chapters-list div:hover {
+  transform: scale(1.03, 1.0);
+  transition: transform 0.3s ease-out;
+}
+.chapters-list div a {
+  text-decoration: none;
+  color: navy;
+}
+.chapters-list div a:hover {
+  color: red;
+}
+
+
+.chapters-under-development {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem auto 8rem;
+  width: 60%;
+  color: #55C2C3;
+  font-family: 'Poppins', sans-serif;
+}
+.chapters-under-development img{
+  height: 16rem;
+  width: fit-content;
+  padding: 0 1rem 3rem;
+  filter: contrast(1.1);
+}
+.chapters-under-development .under-development-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chapters-under-development .under-development-heading div{
+  font-weight: bold;
+  font-size: 2rem;
+}
+.chapters-under-development .under-development-desc div{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.chapters-under-development button {
+  align-self: center;
+  margin: 2.8rem;
+  background: linear-gradient( 90deg, #FD9127 25%, #FD9127 25%, #fff 25%, #fff 75% );
+  cursor: pointer;
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.1);
+}
+.chapters-under-development button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #FD9127;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.chapters-under-development button a img {
+  height: 1.8rem;
+  padding: 0 1.2rem 0.1rem 0rem;
+}

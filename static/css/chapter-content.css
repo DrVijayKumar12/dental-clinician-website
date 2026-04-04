@@ -1,0 +1,200 @@
+.chapter {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  font-family: "Noto Sans", sans-serif;
+  align-items: center;
+}
+.chapter h1 {
+  text-align: center;
+}
+.chapter p {
+  font-size: 1.2rem;
+  padding: 1rem 5rem;
+  color: #026AB9;
+}
+.chapter h2 {
+  text-align: center;
+  padding: 0.4rem 5rem;
+}
+.chapter h3 {
+  padding: 0.4rem 5rem;
+}
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 10% 2% 10%;
+  box-shadow: 1px 7px 18px rgb(0 0 0 / 20%);
+}
+.chapter-table {
+  border-collapse: collapse;
+  margin: 1rem;
+}
+td {
+  font-size: 1.2rem;
+  color: green;
+  padding: 0.8rem;
+  white-space: normal;
+  width: 50%;
+}
+
+.chapter-table .column-1 {
+  border-right: 0.1rem solid black;
+}
+
+.header-row {
+  border-bottom: 0.1rem solid black;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.header-row .column-1 {
+  border-right: 0.1rem solid black;
+}
+hl {
+  color: crimson;
+  font-weight: bold;
+}
+
+.chapter .list-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.chapter .list-div img {
+  width: 38rem;
+}
+
+.complex-list {
+  font-size: 1.2rem;
+  width: 84%;
+  color: #026AB9;
+  padding: 0;
+}
+.complex-list li {
+  padding: 0.8rem;
+}
+.complex-list h3 {
+  text-align: center;
+}
+.simple-list {
+  padding: 0px 100px 10px 100px;
+  color: #026AB9;
+}
+.simple-list li {
+  margin: 1rem;
+}
+.simple-list h3 {
+  text-align: center;
+}
+
+.chapter hr {
+  width: 80%;
+}
+
+/* COMMENT SECTION*/
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10%;
+}
+.comment-container h2 {
+  margin-bottom: 0.6rem;
+}
+.comment-container .guidelines {
+  font-size: 1rem;
+  font-family: Roboto, Arial, sans-serif;
+  margin-bottom: 0.8rem;
+}
+.comment-container .guidelines a {
+  color: #065FD4;
+}
+
+.addcomment-section {
+  display: flex;
+  align-items: center;
+  font-family: Roboto, Arial, sans-serif;
+}
+.comment-container-data {
+  height: 32rem;
+  margin: 0 10% 6rem;
+  overflow-y: auto;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  font-family: Roboto, Arial, sans-serif;
+}
+.comment-logo {
+  display: flex;
+  margin-top: 0.6rem;
+}
+.comment-logo img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+.comment-msg {
+  display: flex;
+  align-items: center;
+}
+.comment-msg div {
+  margin-left: 0.6rem;
+  font-size: 1rem;
+}
+.comment-content {
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  padding: 0 0.6rem;
+}
+
+.comment-input {
+  display: flex;
+  align-items: center;
+}
+
+.comment-input input {
+  border-width: 0px 0px 1px 0px;
+  width: 50vw;
+  height: 2.4rem;
+  font-size: inherit;
+}
+.comment-input input:focus {
+  outline: none;
+  width: 50vw;
+  border-width: 0px 0px 2px 0px;
+}
+
+#addcomment-btn {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #8c8b8b2e;
+  border: none;
+  width: 110px;
+  height: 30px;
+  margin: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#addcomment-btn:hover {
+  color: white;
+  background-color: #026AB9;
+}
+
+/*NON LOGGED IN USER COMMENT DIV*/
+
+.non-logged-addcomment {
+  display: flex;
+  margin: 0px 0px 14px 0px;
+  padding: 5px;
+}
+.non-logged-addcomment input {
+  font-family: "Nunito Sans", sans-serif;
+}

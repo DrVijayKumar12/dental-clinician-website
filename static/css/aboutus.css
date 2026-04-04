@@ -1,0 +1,85 @@
+#aboutus-container {
+  margin: 0 5%; /* Use rem for margin */
+  color: #062f3f;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#aboutus-main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutus-main-section h1 {
+  text-align: center;
+  color: #ffc44d;
+  font-size: 3.4rem;
+}
+
+#aboutus-intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#aboutus-intro div {
+  width: 50%;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+#aboutus-intro img {
+  height: 18rem;
+}
+
+#aboutus-doctor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0;
+}
+#aboutus-doctor-experience {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0.4375rem 1.125rem rgb(0 0 0 / 20%);
+}
+#aboutus-doctor-experience div {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.625rem;
+}
+#aboutus-doctor-experience img {
+  height: 6.25rem;
+  border: 0.25rem solid #062f3f10;
+  padding: 0.125rem;
+  margin: 0.25rem;
+}
+#aboutus-doctor-journey {
+  height: auto;
+  max-width: 98%;
+  margin: 1rem auto;
+  filter: contrast(1.1);
+}
+
+#aboutus-mission div {
+  height: auto;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: url("/static/img/website/our-mission-bg.png") repeat center center;
+  background-size: 15.625rem;
+}
+
+#aboutus-bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  margin: 5rem 0;
+  padding: 0 5rem 2.5rem 5rem;
+  box-shadow: 1px 0.4375rem 1.125rem rgb(0 0 0 / 20%);
+}
+#aboutus-bottom-section h1 {
+  color: #062f3f;
+}
+
+#final-message {
+  font-size: 1.5rem;
+}

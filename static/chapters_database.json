@@ -1,0 +1,42 @@
+[
+  {
+    "chapter_id": "maxillary_anesthesia",
+    "chapter_url": "/oral-surgery/maxillary_anesthesia"
+  },
+  {
+    "chapter_id": "applied_anatomy",
+    "chapter_url": "/oral-surgery/applied_anatomy"
+  },
+  {
+    "chapter_id": "mandibular_nerve",
+    "chapter_url": "/oral-surgery/mandibular_nerve"
+  },
+  {
+    "chapter_id": "maxillary_nerve",
+    "chapter_url": "/oral-surgery/maxillary_nerve"
+  },
+  {
+    "chapter_id": "growth_and_Development_;_Factors_affecting_Growth",
+    "chapter_url": "/orthodontics/growth_and_Development_;_Factors_affecting_Growth"
+  },
+  {
+    "chapter_id": "some_Concepts_of_Growth",
+    "chapter_url": "/orthodontics/some_Concepts_of_Growth"
+  },
+  {
+    "chapter_id": "occlusion",
+    "chapter_url": "/orthodontics/occlusion"
+  },
+  {
+    "chapter_id": "oral_habits",
+    "chapter_url": "/pedodontics/oral_habits"
+  },
+  {
+    "chapter_id": "alveolar_bone",
+    "chapter_url": "/periodontics/alveolar_bone"
+  },
+  {
+    "chapter_id": "gingiva",
+    "chapter_url": "/periodontics/gingiva"
+  }
+]
