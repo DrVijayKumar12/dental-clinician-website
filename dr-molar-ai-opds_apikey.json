@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dental-clinician",
+  "private_key_id": "f5cfe52dc21066880dffc18cd17fd32132cb6628",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDCzRn4mqsGrsYp\nIluc5lePx98W2odbuYH7wc1svZSDx5xKuydbM0hqzwDJVKPHSOl2TBxIqZTWXMdn\npRejMmBjiwBDWSUcn17jMrCv1oAZniEFCDQzF6QIePhwesGBv2y+wvP8w0fyc7Bm\nvMDl52Yp3at9SpICI1NX6juJSilAILd7PxoQsIkUQji7bf9f/mySfloy4k5PpYUL\n7MmXCq1unlu4clXpU/wx5Ni92Kwup4LxiyhC6qWfuy7d0po3Ijz88L7xHHwc+mxc\nENlazDRNld3gRoRgWx9s6Eq8ldF86Dyv8iO8KRre3Y958dfKTgTfK++zG2boaKY3\n0IcKKK9pAgMBAAECggEAGD6oBtWpMjxlFBA0pW3TDrq/kfvsxjEWc8Zb0jbeLxs+\n4TDd5cSXihjtbiFcqPGdgkhYFNXBB9T69HQLDG1kAGpNGWoU67UM0ut81hsKTSXt\n0iSClVanPG63QmM6MPMpjlcmlW+bRW+5+sTEoAM8JzscRuHAaQe12HFMq6T78VZp\necUA7IwtkyuLtxJCBPyYBNGttc4c0l4N+ssc7o1m5XyXUEGhaXwmP9gDQbdgFsMa\nHkg3kb5JoHCNVuGIV/VhXwWeFytCMeMHhr/HWz2wJdsf/eLH0I9w9hop49Iw5q2c\nRS/8j2a8TA153AH0NdBiDNL0va3RAnRB9b7tzBYBaQKBgQDlLpQUHdcNHHyENbwN\nc3vOyghvE/47PLWfatqyzBEbRN5/0z+Ylewx4D2dlYQIJYsF/UgQJffzrRVcQ002\nQjMsHCF1frLw9jS/OVqkJTJixYZgXKI9nGw6/UkpZ+7nZfeoe4fqBOpsiZBFjIj0\nbETo/Jpp3HMvfHMnIFIDLwxzfwKBgQDZmJsJakSGg0wh3tSUxl5C7iyl/ARRqYnX\ngATaYEZrbTPFewCYnJwg5qRPIIxTE/REKnxIcqJzuB5u4PGBiarVkW+8YFrP+ZoB\nnGzTVrYFj9M22DDJpGICCUp5QIVfRraR5icW8GjEjNxzX014r248omf2GDF0HM6g\n3ME2fZExFwKBgFnVhTPRco9wIBrO2VTIdLpdFSs9QgVESckgYHN/bCEtQK4IR0Bv\nW/M8+8n+Zo+u76y8WHgD+gppSRsuQmDHWDmtGSxuKoQrbgea2r3G2tY+qOqyxOGz\no/UHfZseY1YO8SH4shD4Nk+vKH8qlDCDFAvjoD9oqzns5VJr59nZol7PAoGAbdQ4\nFNV9hwOIjuQBGqLReyjqglElAO748zvbtzm28YwqAHhoQZ9ysqyXrJS6H0jIFwv2\ntT6fPpdlTQPfAkoxXyDMbCGaVLUghcWlrDptH3uL2XffkDeXfH2iCHeHmiKADj5D\n5rErwGF0+ArXeJ3bn2E95hoqA/hyVwF1yIIyobsCgYAOYk+n+cOM1ewAfAAM/om3\n8BxcXZhHOinFPG9zWC5cc0yJgKc7q6WQ0yLr7de9lde7ANC7HR3pzblH/g0WmYNX\nQ55ZbJMhmw2q1mow7r2h8gAKrLixPa3VY8IiUbMV8EFuFHBpnOdbg4zAmVFMkk4w\nk3Ca6fySMJpD4bzglIda7A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dr-molar-ai-generated-opds@dental-clinician.iam.gserviceaccount.com",
+  "client_id": "113013930240799880185",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dr-molar-ai-generated-opds%40dental-clinician.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
