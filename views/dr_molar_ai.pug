@@ -1,0 +1,206 @@
+extends layout
+
+block content
+  #molar-ai-container
+    #sidebar
+      .dr-molar_ai-title-img
+        img(src='/static/img/website/menu-ai-icon.png' alt='AI')
+        .dr-molar_ai-title
+          div Dr. Molar AI
+          div Self-Diagnosis Tool
+      .diagnosis-loading Provisional Diagnosis...
+        img#diagnosis-loading-img(src='/static/img/website/diagnosis-loading.gif' alt='analysing...')
+        #diagnosis-loading-pd
+      .progress-container
+        .empty-divs
+
+          .progress-div-labels
+            .progress-div-label
+              img(src="/static/svg/user-details.svg" alt='User Details')
+              div  Personal Details &amp; Consent
+            #personal-details-consent
+            .progress-line
+          .progress-div-labels
+            .progress-div-label
+              img(src="/static/svg/chief-complaint.svg" alt='Chief Complaint')
+              div Chief Complaint
+            #progress-chief-complaint
+            .progress-line
+          .progress-div-labels
+            .progress-div-label
+              img(src="/static/svg/hopi.svg" alt='HOPI')
+              div History of Present Illness
+            #progress-hopi
+            .progress-line
+          .progress-div-labels 
+            .progress-div-label
+              img(src="/static/svg/medical-history.svg" alt='Medical History')
+              div Medical History
+            #progress-medical-history
+            .progress-line
+          .progress-div-labels 
+            .progress-div-label
+              img(src="/static/svg/allergy-history.svg" alt='Allergy History')
+              div History of Allergy
+            #progress-allergy-history
+            .progress-line
+          .progress-div-labels 
+            .progress-div-label
+              img(src="/static/svg/dental-history.svg" alt='Dental History')
+              div Past Dental History
+            #progress-dental-history
+            .progress-line
+          .progress-div-labels 
+            .progress-div-label
+              img(src="/static/svg/personal-history.svg" alt='Personal History')
+              div Personal History
+            #progress-personal-history
+            .progress-line
+          .progress-div-labels 
+            .progress-div-label
+              img(src="/static/svg/dental-examination.svg" alt='Dental Examination')
+              div e-Examination
+            #progress-clinical-features
+            .progress-line
+        .vertical-line
+
+    #mobile-sidebar
+      .dr-molar_ai-title
+        img#progress-toggle-btn(src='/static/svg/sidebar-left-expand.svg' alt='menu' onclick="toggleProgressPanel()")
+      .mobile-progress-menu
+        .mobile-progress-labels
+          img(src="/static/svg/user-details.svg" alt='User Details')
+          #personal-details-consent
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/chief-complaint.svg" alt='Chief Complaint')
+          #progress-chief-complaint
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/hopi.svg" alt='HOPI')
+          #progress-hopi
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/medical-history.svg" alt='Medical History')
+          #progress-medical-history
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/allergy-history.svg" alt='Allergy History')
+          #progress-allergy-history
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/dental-history.svg" alt='Dental History')
+          #progress-dental-history
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/personal-history.svg" alt='Personal History')
+          #progress-personal-history
+          .progress-line
+        .mobile-progress-labels
+          img(src="/static/svg/dental-examination.svg" alt='Dental Examination')
+          #progress-clinical-features
+          .progress-line
+
+
+    if (drMolarAiAnalyser != "dr-molar_ai/analyser")
+      #consent-container
+        .consent-container-title
+          h3 Ready to Begin Your Personalized Dental Diagnosis!
+          img(src='/static/svg/rx_icon.svg' alt= 'Rx')
+        form(id='user-details-form')
+          .consent-details
+            label(for='name') Name
+            input#name(type='text' name='name' minlength ='3' maxlength ='20' autocomplete='off')
+          .consent-details
+            div Gender
+            .gender-options
+              input#male(type='radio' name='gender' value='Male')
+              label(for='male') &nbsp; Male
+
+              input#female(type='radio' name='gender' value='Female')
+              label(for='female') &nbsp; Female
+
+              input#other(type='radio' name='gender' value='Other')
+              label(for='other') &nbsp; Other
+
+          .consent-details
+            label(for='age') Age
+            input#age(type='number' name='age' min='18' max='99' oninput="this.value = this.value.slice(0, 2)" pattern='\d{1,2}')
+        .consent-details
+          span I acknowledge that the information provided by this tool is not a substitute for professional dental advice. I understand the importance of consulting a qualified dentist for personalized guidance regarding my dental health. I agree that any decisions made based on the information from this tool are solely my responsibility.
+          label
+            input#consent(type='checkbox' name='consent')
+            span By continuing, you agree to our 
+              a(href='/terms-of-service' target='_blank') Terms of Service
+              | &nbsp;and 
+              a(href='/privacy-policy' target='_blank') Privacy Policy
+          button#start-btn(type='submit') Continue
+
+      script(src='../static/dr-molar_ai.js')
+
+
+    if (drMolarAiAnalyser === "dr-molar_ai/analyser")
+      #question-section
+        #dr-molar-gif Dr. Molar AI:
+          img(src= "/static/img/website/dr-molar_ai.gif" alt='')
+          button 
+            a(href='/dr-molar_ai')
+              img(src='/static/svg/refresh.svg' alt= 'Restart')
+              span Restart Analysis 
+        button#next-btn
+          span Next
+          img(src='/static/svg/next-btn-arrow.svg' alt= 'Next')
+        .lang-toggle-container
+          input#languageToggle.toggle-checkbox(type='checkbox')
+          label.lang-toggle-slider(for='languageToggle') हिन्दी
+        #ai-skeleton-loading
+          img(src='/static/img/website/ai-skeleton-loading.gif' alt='Skelteton loading...')
+        .question
+          #question-title
+          #question-subtitle
+          #question-image
+          .options-container
+        
+      #loading-overlay
+        img(src='/static/img/website/loading-opd-generator.gif' alt='Generating OPD')
+        p Hold tight! I'm in the process of generating your e-OPD...
+      #opd-receipt-container
+        .assesment-completed 
+          div 🟢 &nbsp;Your AI Dental Assesment is completed
+          div 📃 &nbsp;e-opd card generated by Dr. Molar AI
+        #pdf-container
+          embed#pdf-embed(src='', type='application/pdf')
+          #pdf-viewer
+        .pdf-file-name
+        .generated-pdf-btns
+          button#download-pdf-btn
+            img(src='/static/svg/opd-download.svg' alt= 'Download')
+            span Download Report
+          button#start-new-diagnosis-btn
+            a(href='/dr-molar_ai')
+              img(src='/static/svg/refresh.svg' alt= 'Restart')
+              span Start a New Diagnosis
+
+        .partnered-doctors
+          h1 Our Partnered Doctors
+          div If you wish you to go to our recommended clinic who are in partner with Dental Clinician, tap on your city below!
+          .fiter-partnered-doctors Filter: 
+            .partnered-doctors-location.location-filter-selected(onclick="updateDoctorList('All')") All
+            .partnered-doctors-location(onclick="updateDoctorList('Delhi')") Delhi
+            .partnered-doctors-location(onclick="updateDoctorList('Mumbai')") Mumbai
+            .partnered-doctors-location(onclick="updateDoctorList('Bangalore')") Bangalore
+          .partnered-doctors-list
+        .related-video-section
+          div Video Relevant to your Diagnosis:
+          iframe(src='' frameborder="0" allowfullscreen)
+
+
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" integrity="sha512-q+4liFwdPC/bNdhUpZx6aXDx/h77yEQtn4I1slHydcbZK34nLaR3cAeYSJshoxIOq3mjEf7xJE8YWIUHMn+oCQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+      script(src='https://unpkg.com/pdf-lib@1.4.0/dist/pdf-lib.min.js')
+      script(src='https://unpkg.com/downloadjs@1.4.7')
+      script(src='../static/dr-molar_ai_analyser.js')
+      script.
+        var userDetails = !{JSON.stringify(userDetails)};
+
+
+

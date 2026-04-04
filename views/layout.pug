@@ -1,0 +1,206 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='keywords' content='dental clinic, best dental services, dental education, molar ai, dental ai, dental community, oral health, dental care, dentistry, dental treatment, dental checkup, dental hygiene, dental implants, teeth whitening, root canal, orthodontics, pediatric dentistry, cosmetic dentistry, oral surgery, periodontics, dental technology, dental professionals, dental practice, dental cleaning, dental emergencies, dental crowns, dental bridges, dental veneers')
+    title Dental Clinician
+    link(rel='icon' type='image/x-icon' href='/static/img/website/dental-clinician-logo.png')
+
+
+    link(rel='stylesheet' href='../static/css/style.css')
+    link(rel='stylesheet' href='../static/css/home.css')
+    link(rel='stylesheet' href='../static/css/dr-molar_ai.css')
+    link(rel='stylesheet' href='../static/css/syllabus.css')
+    link(rel='stylesheet' href='../static/css/chapterlist.css')
+    link(rel='stylesheet' href='../static/css/chapter-content.css')
+    link(rel='stylesheet' href='../static/css/community.css')
+    link(rel='stylesheet' href='../static/css/aboutus.css')
+    link(rel='stylesheet' href='../static/css/sign-up.css')
+    link(rel='stylesheet' href='../static/css/login.css')
+    link(rel='stylesheet' href='../static/css/profile.css')
+    link(rel='stylesheet' href='../static/css/privacy_policy.css')
+    link(rel='stylesheet' href='../static/css/terms_of_service.css')
+    link(rel='stylesheet' href='../static/css/community_guidelines.css')
+    link(rel='stylesheet' href='../static/css/404_error.css')
+
+    style.
+  body(data-user-id=session && session.user_id)
+
+
+    header
+
+      .header
+        .navbar-mobile
+          img#hamburger-menu(src='/static/svg/hamburger-menu.svg' alt='menu' onclick="toggleSidePanel()")
+          #side-nav-menu
+            span Empowering Dental Practice
+            .nav-menu-items
+              img(src='/static/img/website/menu-home-icon.png')
+              .nav-menu-item
+                a(href='/home') Home
+                div Back to Main Menu
+            .nav-menu-items
+              img(src='/static/img/website/menu-ai-icon.png')
+              .nav-menu-item
+                a(href='/dr-molar_ai') Dr. Molar AI
+                div AI powered Self Diagnosis Tool
+            .nav-menu-items
+              img(src='/static/img/website/menu-syllabus-icon.png')
+              .nav-menu-item
+                a(href='/syllabus') Full Syllabus
+                div Dental subject notes of all four years
+            .nav-menu-items
+              img(src='/static/img/website/menu-community-icon.png')
+              .nav-menu-item
+                a(href='/community') Community
+                div Engage with your fellow dental professionals
+            .nav-menu-items
+              img(src='/static/img/website/menu-aboutus-icon.png')
+              .nav-menu-item
+                a(href='/about') About Us
+                div Know about Dental Clinician
+            #nav-menu-copyright
+              div © 2023 Dental Clinician
+              div Copyright | All Rights Reserved
+
+        .header-left
+          a(href='/home')
+            img#header-brand-name(src='/static/img/website/dental-clinician-logo-8k.png' alt='Dental Clinician Brand Name')
+        .header-mid
+          .navbar-desktop
+            ul
+              li
+                a(href='/home') Home
+              li
+                a(href='/dr-molar_ai') Dr. Molar AI
+              li#syllabus
+                a(href='/syllabus') Full Syllabus
+              li
+                a(href='/community') Community
+              li
+                a(href='/about') About Us
+
+
+        if session.user_id !== undefined
+          .header-right
+            .search-box
+              input(type="text" id="search-input-box" placeholder="Search by topics..." autocomplete='off')
+              .search-result-box
+            .profile-corner
+              a(href='/my-profile')
+                img.user-logo(src= session.avatarUrl alt='user')
+              .profile-content
+                a(href='/my-profile')
+                  #username= session.username
+                .safe-logged-in
+                  img(src='/static/svg/user-safe-login.svg' alt='Safe log-in')
+                  span logged-in
+              a(href="/my-profile/logout")
+                img#home-logout-icon(src='/static/svg/logout-icon.svg' alt='logout')
+
+        else
+          .header-right
+            .search-box
+              input(type="text" id="search-input-box" placeholder="Search by topics..." autocomplete='off')
+              .search-result-box
+            img.user-logo(src='/static/svg/user-profile-circle.svg' alt='User profile picture')
+            button.login-btn
+              a(href='/login') Log In
+            button.signup-btn
+              a(href='/sign-up') Sign Up
+
+
+    .header-space
+
+    main
+      block content
+    footer
+    .footer
+      .footer-main
+        .footer-profiles
+          h4 Clinic Info
+          .footer-clinic
+            .footer-profile-clinic-img
+              a(href='/home')
+                img.logo-img(src='/static/img/website/dental-clinician-logo.png' alt='Dental Clinician Logo')
+
+            .footer-profile-text-section
+              div Dental Clinician
+              .footer-profile-text
+                img(src='/static/svg/map-pin.svg' alt='Address')
+                span Bahadurgarh, Haryana,
+                div India-124507
+                img(src='/static/svg/whatsapp-icon.svg' alt='WhatsApp')
+                span +91 79888 53585
+
+          h4 Doctors Info
+          #footer-dr-profile
+            .footer-profile-dr-img
+              img(src='/static/img/website/vijay-profile-photo.png' alt='Dr. Vijay Kumar')
+              .footer-profile-text-section
+                div Dr. Vijay Kumar
+                .footer-profile-text
+                  img(src='/static/svg/graduate-cap.svg' alt='Qualification')
+                  span B.D.S.
+                  div (Regn. no. HN 11534-A)
+
+            .footer-profile-dr-img
+              img(src='/static/img/website/dr-srishti-jain.jpg' alt='Dr. Srishti Jain')
+              .footer-profile-text-section
+                div Dr. Srishti Jain
+                .footer-profile-text
+                  img(src='/static/svg/graduate-cap.svg' alt='Qualification')
+                  span B.D.S (cert. Endodontist)
+                  div M.Sc. Medical Anatomy
+                  div (Regn. no. A-18252)
+
+        .bottom-links
+          h4 Important Links
+          ul
+            li
+              img(src='/static/img/website/menu-ai-icon.png' alt='Dr. Molar')
+              a(href='/dr-molar_ai') Dr. Molar AI
+            li
+              img(src='/static/img/website/menu-syllabus-icon.png' alt='Syllabus')
+              a(href='/syllabus') Full Syllabus
+            li
+              img(src='/static/img/website/menu-community-icon.png' alt='Community')
+              a(href='/community') Community
+            li
+              img(src='/static/img/website/menu-aboutus-icon.png' alt='About Us')
+              a(href='/about') About Us
+            li
+              img(src='/static/svg/privacy-policy-icon.svg' alt='Privacy Policy')
+              a(href='/privacy-policy') Privacy Policy
+            li
+              img(src='/static/svg/terms-of-service-icon.svg' alt='Terms of Service')
+              a(href='/terms-of-service') Terms of Service
+            li
+              img(src='/static/svg/community-guidelines-icon.svg' alt='Community Guidelines')
+              a(href='/community-guidelines') Community Guidelines
+        .bottom-contacts
+          .contact
+            h4 Contact Us
+          .email
+            img(src='/static/svg/mailbox-icon.svg' alt='email')
+            a(href='mailto:dr.dentalclinician@gmail.com?body=Dear%20Dr.%20Vijay%2C%0A%0A' target='_blank') dr.dentalclinician@gmail.com
+          .map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d875.0023411550446!2d76.93463146956229!3d28.689366474941778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d094c00010001%3A0x4a6497dc60c3d42!2sBajaj%20Auto%20(Baba%20Motors%2C%20Bahadurgarh%2C%20New%20Najaf%20Garh%20Road)!5e0!3m2!1sen!2sin!4v1704532243605!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+      .footer-social
+        h4 Follow Us
+      .footer-social-icons
+        a(href='https://youtube.com/@dentalclinician' target='_blank')
+          img(src='/static/svg/youtube-icon.svg' alt='YouTube')
+        a(href='https://www.linkedin.com/in/dr-vijay-kumar-40269b247' target='_blank')
+          img(src='/static/svg/linkedin-icon.svg' alt='LinkedIn')
+        a(href='https://instagram.com/doctor_vijaykumar' target='_blank')
+          img(src='/static/svg/instagram-icon.svg' alt='Instagram')
+
+      .copyright Copyright © 2024 Dental Clinician. All Rights Reserved.
+
+  script(src='../static/index.js')
+  script(src="https://cdn.botpress.cloud/webchat/v1/inject.js")
+  script(src="https://mediafiles.botpress.cloud/864a5ab9-bb3f-431f-b6df-a816b661ef8e/webchat/config.js" defer)

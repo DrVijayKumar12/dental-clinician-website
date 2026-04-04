@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .error_container
+        h1
+            div 404 Error
+            | Oops! Page Not Found
+        div What to Do:
+        ol
+            li
+                strong Double-check the URL:
+                |  Ensure that the URL you entered is correct. Verify for any typographical errors and make sure it matches the intended web address.
+            li
+                strong Go to the Home Page:
+                |  You can return to the website's home page by clicking on the logo or using the navigation menu.
+            li
+                strong Report the Issue:
+                |  If you believe there is a problem with the website or the link you followed, consider reporting it to the website administrator.
+        p We apologize for any inconvenience this may have caused. If you continue to encounter this error, please contact our support team for further assistance.
+        button
+            a(href= 'mailto:letsunderstandconcepts@gmail.com?subject=Reporting%20an%20Error%20on%20the%20Website') Report Error

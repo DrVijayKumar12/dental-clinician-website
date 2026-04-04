@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  if content === "maxillary_anesthesia"
+    include ./subjects/oral-surgery/anesthesia/maxillary_anesthesia.pug
+
+  else if content === "growth_and_Development_;_Factors_affecting_Growth"
+    include ./subjects/orthodontics/growth_and_Development/growth_and_Development_;_Factors_affecting_Growth.pug
+
+  else if content === "some_Concepts_of_Growth"
+    include ./subjects/orthodontics/growth_and_Development/some_Concepts_of_Growth.pug
+
+  else if content === "occlusion"
+    include ./subjects/orthodontics/occlusion/occlusion.pug
+
+  else if content === "oral_habits"
+    include ./subjects/pedodontics/oral_Habits/oral_habits.pug
+
+  else if content === "alveolar_bone"
+    include ./subjects/periodontics/periodontium/alveolar_bone.pug
+
+  else if content === "gingiva"
+    include ./subjects/periodontics/periodontium/gingiva.pug
+
+  .chapter-content-div
+
+  .comment-container
+    h2 Comments
+    .guidelines
+      div Remember to keep comments respectful and to follow our 
+        a(href='/community-guidelines' target='_blank') community guidelines
+
+    if (session.user_id)
+      .addcomment-section
+        form.comment-input(method='POST' action=`/${subjectID}/${content}` autocomplete="off")
+          input(type='text' name='comment' placeholder='  Add a comment...')
+          input(type='hidden' name='subject', value=`/${subjectID}`)
+          input(type='hidden' name='chapterUrl', value=`/${subjectID}/${content}`)
+          input(type='hidden' name='avatarUrl', value= session.avatarUrl)
+          button#addcomment-btn(type='submit') Add Comment
+    else
+      .non-logged-addcomment
+        form.comment-input(autocomplete="off")
+          input(type='text' name='comment' placeholder=' To post a comment below, you need to log in first as you are currently not logged in.')
+        button.login-btn
+          a(href='/login') Log In
+
+  .comment-container-data
+    if comments !== undefined
+      each comment in comments      
+        .comment-section
+          .comment-logo
+            img(src= comment.avatarUrl alt='user')
+          .comment-content
+            .comment-msg
+              h3= comment.username
+              - const now = new Date();
+              - const timestamp = new Date(comment.timestamp);
+              - const diff = now - timestamp;
+              - const daysAgo = Math.floor(diff / (24 * 60 * 60 * 1000));
+              - const monthsAgo = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000));
+              div= monthsAgo === 0 ? daysAgo + ' days ago' : monthsAgo === 1 ? '1 month ago' : monthsAgo + ' months ago'
+            div= comment.comment

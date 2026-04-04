@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    script(src='https://accounts.google.com/gsi/client' async defer)
+    - const success = true;
+    .sign-up-container
+        .sign-up-card
+            img(src='/static/img/website/sign-up-bg.png' alt='sign-up')
+            .sign-up-page
+                h1 Join the Community of Dental Professionals
+                #g_id_onload(data-client_id='1064366928714-v5rdnt9qste1ekd83ptrd4ooij2vv26j.apps.googleusercontent.com' data-context='signup', data-ux_mode='popup', data-login_uri='http://localhost/sign-up')
+                .g_id_signin(data-type='standard', data-shape='rectangular', data-theme='outline', data-text='signup_with', data-size='large', data-logo_alignment='left', data-scope='profile email openid')
+                div Or
+                form.sign-up-inputs(method='POST' action='/sign-up' autocomplete="off" )
+                    input(type='text' name='name' placeholder='Name' oninput="validateName()" minlength="3" maxlength="21")
+                    span#invalidName
+                    input(type='email' name='email' placeholder='Email' oninput="validateEmail()" maxlength="40")
+                    span#invalidEmail
+                    input(type='password' name='password' placeholder='Password' oninput="validatePassword" maxlength="20")
+                    span#invalidPassword
+                    input(type='password' name='confirmPassword' placeholder='Confirm Password' oninput="validateConfirmPassword()" maxlength="20")
+                    span#confirmPasswordError
+                    label#avatar-label(for="choose-avatar") Choose your avatar icon:
+
+                    .avatar-wrapper
+                        img.avatar-option#avatar1(src="/static/img/website/women-avatar.png")
+                        img.avatar-option#avatar2(src="/static/img/website/boy-avatar.png")
+                        img.avatar-option#avatar3(src="/static/img/website/girl-avatar.png")
+                        img.avatar-option#avatar4(src="/static/img/website/boy2-avatar.png")
+                        img.avatar-option#avatar5(src="/static/img/website/girl2-avatar.png")
+                        img.avatar-option#avatar6(src="/static/img/website/women2-avatar.png")
+                        img.avatar-option#avatar7(src="/static/img/website/adult-doctor.png")
+                        img.avatar-option#avatar8(src="/static/img/website/elder-doctor.png")
+                        input#avatar-input(type="hidden" name="avatar" value="")
+
+                    input(type='submit' value='Create Account' disabled)
+                    div#already-account Already have an account? &nbsp; <login-link><a href ="/login">Log In</a></login-link>
+
+            if message !== undefined
+                #registration-modal
+                    #registration-modal-content
+                        span.close &times;
+                        div= message
+                        img(src='/static/img/green-tick.jpg' alt='')
+
+    if (signupStatus === "MissingField")
+        .signup-missing-field
+            img(src= "/static/img/website/white-cross-icon.png" alt='cross')
+            div Some Fields are Missing!
+
+    script(src='../static/sign-up.js')

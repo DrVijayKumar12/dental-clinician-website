@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  -var totalChapUrlList = chapUrls;
+  -var unitNameList = unit;
+  -var totalChapters = content;
+  .chapters-main-container
+    .chapters-list_heading
+      button
+        a(href = '/syllabus')
+          img(src='/static/svg/back-arrow.svg' alt = 'back')
+          | Back
+      h1 #{title}
+
+    each item, index1 in totalChapters
+      -var unitUrl = totalChapUrlList[index1];
+      -var unitNumber = index1 + 1;
+      .unitName
+        div= "Unit : " + unitNumber + " " + unitNameList[index1]
+        .chapters-list
+          each chapter, index in item
+            div
+              a(href= unitUrl[index]) 
+                | Chapter #{index + 1}. &nbsp; #{chapter}
+
+    .chapters-under-development
+      .under-development-heading
+        img(src="/static/img/website/under-development.gif", alt="Under Development")
+        div Chapters Under Development!
+      .under-development-desc
+        div Please check back later for updates. If you'd like to contribute your valuable content to our database, please feel free to connect with us.
+      button
+        a(href= 'mailto:letsunderstandconcepts@gmail.com?subject=Interested%20in%20Contributing%20Subject%20Matter!&body=Dear%20Dr.%20Vijay%2C%0A%0A' target='_blank')
+          img(src='/static/svg/mailbox-icon.svg' alt= 'Contact')
+          span Let's Connect
+
+
+

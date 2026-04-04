@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .login-page
+        img#doctor-community(src='/static/img/website/doctor-community-bg.png')
+
+        .login-page-form
+            h1  Login to Dental Clinician Hub
+            div Revolutionizing Your Dental Practice!
+            #g_id_onload(data-client_id='1064366928714-v5rdnt9qste1ekd83ptrd4ooij2vv26j.apps.googleusercontent.com' data-context='signin' data-ux_mode='popup' data-login_uri='http://localhost/sign-up')
+            .g_id_signin(data-type='standard' data-shape='pill' data-theme='outline' data-text='signin_with' data-size='large' data-logo_alignment='left' data-scope='profile email openid')
+            div Or
+
+            form.login-inputs(method='POST' action='/login')
+                input(type='email' name='email' placeholder='Email')
+                input(type='password' name='password' placeholder='Password')
+                input(type='submit' value='Login')
+            div Don't have an account? &nbsp; <signup-link><a href ="/sign-up">Sign Up</a></signup-link>
+
+    if message !== undefined
+        #login-modal
+            #login-modal-content
+                span.login-close &times;
+                div= message
+                img(src='/static/img/website/cross-icon.png' alt='close')
+
+    script(src='https://accounts.google.com/gsi/client' async defer)
+

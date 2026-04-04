@@ -1,0 +1,284 @@
+extends layout
+
+block content
+  .header_top
+    marquee(direction='left')
+      | This website has been designed to support the dental education and
+      | provide a community platform for students to connect with fellow
+      | students and professionals in the field.
+
+  if (logoutStatus === "logoutDone")
+    .profile-logged-out
+      div Logged Out Successfully!
+
+  .main-container
+    #content_upper
+      video(autoplay='true', loop='true', muted)
+          source(src='/static/img/website/dental-clinician-main-background.mp4', type='video/mp4')
+      #hero-text-container
+        h1 EMPOWERING 
+          span#auto-typed
+        h2 The Ultimate Destination for Dental Students and Professionals
+      .bottom-arrow
+    .content_middle
+      #dr-molar-ai-home-container
+        img#dr-molar-ai-home-img(src='/static/img/website/dr-molar-ai-home.png' alt="Dr. Molar AI")
+        #dr-molar-ai-home-content
+          div
+            home-hl MEET 
+            | Dr. Molar AI - Self Diagnosis Tool
+          span Want to get your Dental e-OPD done by our Artificial Intelligence
+          button
+            a(href='/dr-molar_ai') Start Now
+      .dr-molar-ai-details
+        h2 Transforming Dental Care with Technology
+        p At Dr. Molar AI, we believe in making dental health assessment accessible and convenient. Our platform empowers users to self-assess dental conditions through an intuitive process, generating electronic OPD reports with accurate diagnoses and treatment recommendations—all at no cost.
+
+        h3 How it Works
+        .how-it-works-container
+          .how-it-works
+            img(src='/static/img/website/ai-answer-questions.png' alt="Answer Questions")
+            div Answer Questions
+            p Complete a comprehensive questionnaire covering chief complaints, history of present illness, medical history, allergies, personal history, and clinical features.
+          .how-it-works
+            img(src='/static/img/website/ai-diagnosis.png' alt="AI Diagnosis")
+            div AI Diagnosis
+            p Our advanced artificial intelligence analyzes your responses to provide a detailed and accurate diagnosis.
+          .how-it-works
+            img(src='/static/img/website/instant-opd-report.png' alt="Instant OPD Report")
+            div Instant OPD Report
+            p Receive a personalized electronic OPD report, including treatment recommendations, directly to your inbox.
+
+        h3 Dr. Molar AI Uniqueness
+        .dr-molar-ai-uniqueness-container
+          .dr-molar-ai-uniqueness
+            img(src='/static/img/website/personalised-care.png' alt="Personalized Care")
+            div Personalized Care
+            p Access treatment recommendations tailored to your unique dental profile.
+          .dr-molar-ai-uniqueness
+            img(src='/static/img/website/user-friendly-platform.png' alt="User-friendly Platform")
+            div User-friendly Platform
+            p Access our bilingual easy-to-understand Dr. Molar AI on mobile anytime—without Signing up.
+          .dr-molar-ai-uniqueness
+            img(src='/static/img/website/chatbot-support.png' alt="24/7 Chatbot Support")
+            div 24/7 Chatbot Support
+            p Engage with our Website Chatbot manned by experienced dental clinicians for immediate assistance and guidance.
+      button
+        a(href='/dr-molar_ai') Begin Self-Assessment Now
+
+      h2 Get a grip on theory of all 4 Year Subjects!
+      .subject-slider
+        .slide-track
+          .subject-box-slide
+            .slide
+              a(href='/endodontics')
+                img(src='/static/img/endodontics/endodontics-book.png' alt="Cohen's Endodontics" )
+              div Endodontics
+          .subject-box-slide
+            .slide
+              a(href='/operative-dentistry')
+                img(src='/static/img/operative-dentistry/sturdevants-operative-dentistry.jpg' alt="Sturdevant's Operative Dentistry" )
+              div Operative Dentistry
+          .subject-box-slide  
+            .slide
+              a(href='/oral-medicine')
+                img(src='/static/img/oral-medicine/oral-medicine-book.png' alt="Burket's Oral Medicine")
+              div Oral Medicine
+          .subject-box-slide
+            .slide
+              a(href='/oral-surgery')
+                img(src='/static/img/oral-surgery/oral-surgery-book.png' alt="Neelima's Oral Surgery")
+              div Oral Surgery
+          .subject-box-slide
+            .slide
+              a(href='/orthodontics')
+                img(src='/static/img/orthodontics/orthodontics-book.jpg' alt="Balaji's Orthodontics")
+              div Orthodontics
+          .subject-box-slide
+            .slide
+              a(href='/periodontics')
+                img(src='/static/img/periodontics/periodontics-book.jpg' alt="Caranza's Periodontology")
+              div Periodontics
+          .subject-box-slide            
+            .slide
+              a(href='/prosthodontics')
+                img(src='/static/img/prosthodontics/prosthodontics-book.jpg' alt="Nallaswamy's Prosthodontics")
+              div Prosthodontics
+          .subject-box-slide            
+            .slide
+              a(href='/public-health-dentistry')
+                img(src='/static/img/pcd/pcd-book.jpg' alt="Soben Peter's PCD")
+              div Public Health Dentistry
+          .subject-box-slide            
+            .slide
+              a(href='/general-surgery')
+                img(src='/static/img/general-surgery/bailey-&-love-Short-practice-of-surgery.jpg' alt="Bailey & love Short practice of Surgery")
+              div General Surgery
+          .subject-box-slide            
+            .slide
+              a(href='/general-medicine')
+                img(src='/static/img/general-medicine/textbook-of-clinical-medicine.jpg' alt="Textbook-of Clinical Medicine")
+              div General Medicine
+          .subject-box-slide            
+            .slide
+              a(href='/oral-pathology')
+                img(src='/static/img/oral-pathology/shafers-textbook-of-oral-pathology.jpg' alt="Shafers textbook of Oral Pathology")
+              div Oral Pathology
+          .subject-box-slide            
+            .slide
+              a(href='/general-pathology')
+                img(src='/static/img/general-pathology/robbins-general-pathology.jpg' alt="Robbins General Pathology")
+              div General Pathology
+          .subject-box-slide            
+            .slide
+              a(href='/general-microbiology')
+                img(src='/static/img/general-microbiology/dr-arora-textbook-of-microbiology.jpg' alt="DR Arora Textbook of Microbiology")
+              div General Microbiology
+          .subject-box-slide            
+            .slide
+              a(href='/pharmacology')
+                img(src='/static/img/pharmacology/kd-tripathi-medical-pharmacology.jpg' alt="KD Tripathi Medical Pharmacology")
+              div Pharmacology
+          .subject-box-slide            
+            .slide
+              a(href='/dental-materials')
+                img(src='/static/img/dental-materials/phillips-science-of-dental-materials.jpg' alt="Phillips science of dental materials")
+              div Dental Materials
+          .subject-box-slide            
+            .slide
+              a(href='/general-anatomy')
+                img(src='/static/img/general-anatomy/grays-anatomy.jpg' alt="Gray's Anatomy")
+              div General Anatomy
+          .subject-box-slide            
+            .slide
+              a(href='/physiology')
+                img(src='/static/img/physiology/human-physiology-by-ak-jain.jpg' alt="Human Physiology by AK Jain")
+              div Physiology
+          .subject-box-slide            
+            .slide
+              a(href='/oral-anatomy')
+                img(src='/static/img/oral-anatomy/wheelers-dental-anatomy-physiology-&-occlusion.jpg' alt="Wheelers Dental Anatomy Physiology & Occlusion")
+              div Oral Anatomy
+          
+          .subject-box-slide
+            .slide
+              a(href='/endodontics')
+                img(src='/static/img/endodontics/endodontics-book.png' alt="Cohen's Endodontics" )
+              div Endodontics
+          .subject-box-slide
+            .slide
+              a(href='/operative-dentistry')
+                img(src='/static/img/operative-dentistry/sturdevants-operative-dentistry.jpg' alt="Sturdevant's Operative Dentistry" )
+              div Operative Dentistry
+          .subject-box-slide  
+            .slide
+              a(href='/oral-medicine')
+                img(src='/static/img/oral-medicine/oral-medicine-book.png' alt="Burket's Oral Medicine")
+              div Oral Medicine
+          .subject-box-slide
+            .slide
+              a(href='/oral-surgery')
+                img(src='/static/img/oral-surgery/oral-surgery-book.png' alt="Neelima's Oral Surgery")
+              div Oral Surgery
+          .subject-box-slide
+            .slide
+              a(href='/orthodontics')
+                img(src='/static/img/orthodontics/orthodontics-book.jpg' alt="Balaji's Orthodontics")
+              div Orthodontics
+          .subject-box-slide
+            .slide
+              a(href='/periodontics')
+                img(src='/static/img/periodontics/periodontics-book.jpg' alt="Caranza's Periodontology")
+              div Periodontics
+          .subject-box-slide            
+            .slide
+              a(href='/prosthodontics')
+                img(src='/static/img/prosthodontics/prosthodontics-book.jpg' alt="Nallaswamy's Prosthodontics")
+              div Prosthodontics
+          .subject-box-slide            
+            .slide
+              a(href='/public-health-dentistry')
+                img(src='/static/img/pcd/pcd-book.jpg' alt="Soben Peter's PCD")
+              div Public Health Dentistry
+          .subject-box-slide            
+            .slide
+              a(href='/general-surgery')
+                img(src='/static/img/general-surgery/bailey-&-love-Short-practice-of-surgery.jpg' alt="Bailey & love Short practice of Surgery")
+              div General Surgery
+          .subject-box-slide            
+            .slide
+              a(href='/general-medicine')
+                img(src='/static/img/general-medicine/textbook-of-clinical-medicine.jpg' alt="Textbook-of Clinical Medicine")
+              div General Medicine
+          .subject-box-slide            
+            .slide
+              a(href='/oral-pathology')
+                img(src='/static/img/oral-pathology/shafers-textbook-of-oral-pathology.jpg' alt="Shafers textbook of Oral Pathology")
+              div Oral Pathology
+          .subject-box-slide            
+            .slide
+              a(href='/general-pathology')
+                img(src='/static/img/general-pathology/robbins-general-pathology.jpg' alt="Robbins General Pathology")
+              div General Pathology
+          .subject-box-slide            
+            .slide
+              a(href='/general-microbiology')
+                img(src='/static/img/general-microbiology/dr-arora-textbook-of-microbiology.jpg' alt="DR Arora Textbook of Microbiology")
+              div General Microbiology
+          .subject-box-slide            
+            .slide
+              a(href='/pharmacology')
+                img(src='/static/img/pharmacology/kd-tripathi-medical-pharmacology.jpg' alt="KD Tripathi Medical Pharmacology")
+              div Pharmacology
+          .subject-box-slide            
+            .slide
+              a(href='/dental-materials')
+                img(src='/static/img/dental-materials/phillips-science-of-dental-materials.jpg' alt="Phillips science of dental materials")
+              div Dental Materials
+          .subject-box-slide            
+            .slide
+              a(href='/general-anatomy')
+                img(src='/static/img/general-anatomy/grays-anatomy.jpg' alt="Gray's Anatomy")
+              div General Anatomy
+          .subject-box-slide            
+            .slide
+              a(href='/physiology')
+                img(src='/static/img/physiology/human-physiology-by-ak-jain.jpg' alt="Human Physiology by AK Jain")
+              div Physiology
+          .subject-box-slide            
+            .slide
+              a(href='/oral-anatomy')
+                img(src='/static/img/oral-anatomy/wheelers-dental-anatomy-physiology-&-occlusion.jpg' alt="Wheelers Dental Anatomy Physiology & Occlusion")
+              div Oral Anatomy
+          
+          
+
+      span  Our comprehensive guides offer crystal-clear explanations and detailed illustrations to help you master the material.
+      .subject-container
+        img(src='/static/img/website/syllabus-problem-img.png' alt="Syllabus Overburdening")
+        .subject-container-content
+          div  
+            home-hl Whether you&apos;re a 
+            | NEWBIE 
+            home-hl or a 
+            | SEASONED PRO,
+          span Our study guides are an invaluable resource for dental professional at any stage of their studies.
+      .subject-container
+        .subject-container-content
+          div Efficient Learning, Effective Time Management
+          span Delve into fundamental concepts to advanced techniques. Ready to manage your time effectively while enhancing your dental knowledge? 
+          button
+            a(href='/syllabus') Start Learning
+        img(src='/static/img/website/syllabus-solution-img.png' alt="Start Learning")
+    
+    
+    
+    .content_lower
+      video(autoplay='true', loop='true', muted)
+        source(src='/static/img/website/dental-clinician-footer-video.mp4', type='video/mp4')
+
+
+    script(src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+  script(src='../static/home.js')

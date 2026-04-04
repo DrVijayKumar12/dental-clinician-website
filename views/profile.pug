@@ -1,0 +1,132 @@
+extends layout
+
+block content
+
+    .profile-page
+        .profile-menu
+            .profile-menu-header
+                a(href='/my-profile')
+                    img(src= session.avatarUrl alt='profile-photo')
+                .profile-menu-header-idName
+                    div= session.username
+                    div#uniqueID USER ID: #{session.uniqueId}
+            .profile-menu-items
+                a(href="/my-profile/tracker")
+                    .study-tracker-menu
+                        img(src= "/static/img/website/study-tracker-book.png" alt='study')
+                        div My Study Tracker
+                a(href="/my-profile/update")
+                    .update-account-menu
+                        img(src= "/static/img/website/profile-update-icon.png" alt='edit')
+                        div Update My Profile
+                a(href="/my-profile/logout")
+                    .logout-account-menu
+                        img(src= "/static/img/website/logout-icon.png" alt='edit')
+                        div Log Out
+                a(href="/my-profile/delete")
+                    .delete-account-menu
+                        img(src= "/static/img/website/delete-icon.png" alt='delete')
+                        div Delete Account
+
+        if (myProfileUrl === "my-profile")
+
+            .profile-details
+                img#profile-photo(src= session.avatarUrl alt='profile-photo')
+
+                div#profile-username
+                    span(name='name') #{session.username} 
+                div#profile-email-id 
+                    span(name='email') Registered Email ID &nbsp; : &nbsp; #{session.emailId}
+                div#profile-uniqueID User ID &nbsp; : &nbsp; #{session.uniqueId}
+
+            if (updateStatus === "UpdateSuccess")    
+                .profile-update-success
+                    img(src= "/static/img/website/transparent-green-tick.png" alt='cross')
+                    div Profile Updated Successfully!
+
+
+        if (myProfileUrl === "my-profile/tracker")
+            .profile-study-tracker
+                div Under Construction
+                img(src= "/static/img/website/error-404.gif" alt='error-404')
+
+
+        if (myProfileUrl === "my-profile/update")
+            .update-account-content
+                img#edit-icon(src= "/static/img/website/edit-icon.png" alt='edit')
+                form.update-account-inputs(method='POST' action='/my-profile/update')
+                    input#username-input(type='text' name='newName' value = session.username minlength="3" maxlength="21" )
+                    div Email ID &nbsp; : &nbsp; #{session.emailId}
+                    label(for="enter-password") Enter your password:
+                    input#enter-password(type='password' name='enteredPassword' placeholder='Password')
+                    label(for="choose-avatar") Update your avatar icon:
+
+                    .avatar-wrapper
+                        img.avatar-option#avatar1(src="/static/img/website/women-avatar.png")
+                        img.avatar-option#avatar2(src="/static/img/website/boy-avatar.png")
+                        img.avatar-option#avatar3(src="/static/img/website/girl-avatar.png")
+                        img.avatar-option#avatar4(src="/static/img/website/boy2-avatar.png")
+                        img.avatar-option#avatar5(src="/static/img/website/girl2-avatar.png")
+                        img.avatar-option#avatar6(src="/static/img/website/women2-avatar.png")
+                        img.avatar-option#avatar7(src="/static/img/website/adult-doctor.png")
+                        img.avatar-option#avatar8(src="/static/img/website/elder-doctor.png")
+                        input#avatar-input(type="hidden" name="newAvatar" value="")
+
+                    .update-and-cancel-btn    
+                        input#update-btn(type='submit' value='Update')
+                        button.update-account-cancel
+                            a(href="/my-profile") Cancel
+
+            if (updateStatus === "WrongPassword")
+                .profile-update-failed
+                    img(src= "/static/img/website/white-cross-icon.png" alt='cross')
+                    div Oops! Password is Incorrect
+
+
+        if (myProfileUrl === "my-profile/logout")
+            .logout-content
+                img(src= "/static/svg/logout-icon.svg" alt='logout')
+                .logout-content-card
+                    h3 Are you sure you want to logout yourself ?
+                    .logout-btn-options
+                        button#logout-btn(type='button') Log Out
+                        button.logout-btn-cancel 
+                            a(href="/my-profile") Cancel
+
+
+        if (myProfileUrl === "my-profile/delete")
+            .delete-account
+                img(src= "/static/img/website/black-delete-icon.png" alt='delete')
+                .delete-account-card
+                    h3 Are you sure you want to delete your account ?
+                    div#warning This action is irreversible and all of your data will be permanently deleted from our system. Please note that once you delete your account, you will not be able to retrieve any of your information. If you are sure you want to proceed, click "DELETE" button below.
+                    .delete-btn-options
+                        button#delete-btn(type='button') Delete
+                        button.delete-btn-cancel
+                            a(href="/my-profile") Cancel
+
+
+    script.
+        const deleteBtn = document.querySelector("#delete-btn");
+
+        // DELETE USER ACCOUNT
+        deleteBtn.addEventListener("click", () => {
+        fetch("/my-profile/delete", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+            if (response.ok) {
+                window.location.href = "/"; // Redirect to the home page after deleting the account
+            } else {
+                console.log("Delete failed");
+            }
+            })
+            .catch((error) => {
+            console.log(error.message);
+            });
+        });
+
+
